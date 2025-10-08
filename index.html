@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<title>Joke-O-Meter</title>
+<style>
+  body { 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+    font-family: sans-serif;
+  }
+
+  /* Sticky Navbar */
+  #container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-image: url('assets/bg.jpeg');
+    z-index: 1000; /* it stays above the jokes */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+  }
+
+  .joke {
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .reveal-btn {
+    padding: 10px 16px;                
+    font-size: 16px;                   
+    border-radius: 12px;               
+    background-color:  #83c671;          
+    color: #fff;                                          
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;         
+    margin-top: 15px;                 
+    justify-content: center;
+  }
+
+  .reveal-btn {
+  cursor: default;
+  }
+
+  .punchline { display: none; }
+
+  #joke1 { background: linear-gradient(to bottom, #83c671,#b8d878 ); }
+  #joke2 { background: linear-gradient(to bottom, #b8d878,#dae57c); }
+  #joke3 { background: linear-gradient(to bottom, #dae57c,#f0e771); }
+  #joke4 { background: linear-gradient(to bottom, #f0e771, #edb26c);}
+  #joke5 { background: linear-gradient(to bottom, #edb26c,#e36162); }
+  #joke6 { background: linear-gradient(to bottom, #e36162,#ff3e3e); }
+
+svg {
+  width: 250px;       
+  height: auto;
+  display: block;      
+  margin: 0 auto;      
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="container"></div>
+
+<!-- Jokes -->
+
+<!--Joke 1-->
+<div id="joke1" class="joke" >
+  <div class="joke-content">
+    <p data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="0"
+       style ="font-size: 24px; font-weight: bold; text-align: center; justify-content: center; color: #fff;">
+       Why was the angle always sad? </p>
+
+     <img src="assets/WhatsApp Image 2025-10-05 at 21.53.54 (1).jpeg" 
+       alt="Angle image"
+       data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="0"
+       style="width: 600px; margin: 0 auto 20px auto; display: block;">
+
+     <!-- reveal button -->
+    <button onclick="revealJoke(this)" class="reveal-btn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1100">
+  Reveal Joke
+</button>
+
+    <!-- hidden punchline -->
+     <p class="punchline"
+         data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300"
+         style="font-size:24px; font-weight:bold; text-align:center; color:#fff;">
+        ... because it was never right
+     </p>
+  </div>
+</div>
+  
+<!--Joke 2-->
+<div id="joke2" class="joke">
+  <div class="joke-content">
+    <p data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="0"
+       style="font-size: 24px; font-weight: bold; text-align: center; justify-content: center; color: #fff;">
+       Why didn’t the skeleton go to the dance?</p>
+
+    <img src="assets/WhatsApp Image 2025-10-05 at 21.53.53.jpeg" 
+         alt="Skeleton image"
+         data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="0"
+         style="width: 600px; margin: 0 auto 20px auto; display: block;">
+
+     <!-- reveal button -->
+    <button onclick="revealJoke(this)" class="reveal-btn" data-aos="zoom-in" data-aos-duration="1000"  data-aos-delay="1100">
+      Reveal Joke
+    </button>
+
+    <!-- hidden punchline -->
+      <p class="punchline"
+         data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300"
+         style="font-size:24px; font-weight:bold; text-align:center; color:#fff;">
+        ...Because it had no body to go with
+     </p>
+  </div>
+</div>
+
+<!--Joke 3-->
+<div id="joke3" class="joke">
+  <div class="joke-content">
+    <p data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="0"
+       style ="font-size: 24px; font-weight: bold; text-align: center; justify-content: center; color: #fff;">
+       What do fries do when they meet after a long time?</p>
+
+    <img src="assets/WhatsApp Image 2025-10-05 at 21.53.53 (1).jpeg" 
+         alt="Fries image"
+        data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="0"
+       style="width: 600px; margin: 0 auto 20px auto; display: block;">
+
+     <!-- reveal button -->
+     <button onclick="revealJoke(this)" class="reveal-btn" data-aos="zoom-in" data-aos-duration="1000"  data-aos-delay="1100">
+      Reveal Joke
+    </button>
+
+    <!-- hidden punchline -->
+     <p class="punchline"
+         data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300"
+         style="font-size:24px; font-weight:bold; text-align:center; color:#fff;">
+        ... They ketchup
+    </p>
+  </div>
+</div>
+
+<!--Joke 4-->
+<div id="joke4" class="joke">
+  <div class="joke-content">
+    <p data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="0"
+       style="font-size: 24px; font-weight: bold; text-align: center; justify-content: center; color: #fff;">
+       What dog is the best at magic?</p>
+
+    <img src="assets/WhatsApp Image 2025-10-05 at 21.53.54.jpeg" 
+         alt="Dog image"
+         data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="0"
+         style="width: 600px; margin: 0 auto 20px auto; display: block;">
+
+     <!-- reveal button -->
+     <button onclick="revealJoke(this, 'assets/')"  class="reveal-btn" data-aos="zoom-in" data-aos-duration="1000"  data-aos-delay="1100">
+      Reveal Joke
+    </button>
+
+    <!-- hidden punchline -->
+     <p class="punchline"
+         data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300"
+         style="font-size:24px; font-weight:bold; text-align:center; color:#fff;">
+      ..A labracadabrador<br>
+    </p>
+  </div>
+</div>
+
+<!--Joke 5-->
+<div id="joke5" class="joke">
+  <div class="joke-content">
+    <p data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="0"
+       style="font-size: 24px; font-weight: bold; text-align: center; justify-content: center; color: #fff;">
+       Why should you always knock on the door before opening the fridge? </p>
+
+    <img src="assets/WhatsApp Image 2025-10-05 at 21.53.52.jpeg" 
+         alt="Salad image"
+          data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="0"
+         style="width: 600px; margin: 0 auto 20px auto; display: block;">
+
+     <!-- reveal button -->
+     <button onclick="revealJoke(this)" class="reveal-btn" data-aos="zoom-in" data-aos-duration="1000"  data-aos-delay="1100">
+      Reveal Joke
+    </button>
+
+    <!-- hidden punchline -->
+    <p class="punchline"
+         data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300"
+         style="font-size:24px; font-weight:bold; text-align:center; color:#fff;">
+      ..Because there might be a salad dressing<br>
+    </p>
+  </div>
+</div>
+
+<!--Joke 6-->
+<div id="joke6" class="joke">
+  <div class="joke-content">
+   <p data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="0"
+       style="font-size: 24px; font-weight: bold; text-align: center; justify-content: center; color: #fff;">
+       Why did the laptop get glasses? </p>
+
+    <img src="assets/WhatsApp Image 2025-10-05 at 21.53.52 (1).jpeg" 
+         alt="Laptop image"
+          data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="0"
+         style="width: 600px; margin: 0 auto 20px auto; display: block;">
+
+     <!-- reveal button -->
+     <button onclick="revealJoke(this)" class="reveal-btn" data-aos="zoom-in" data-aos-duration="1000"  data-aos-delay="1100">
+      Reveal Joke
+    </button>
+
+    <!-- hidden punchline -->
+    <p class="punchline"
+         data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300"
+         style="font-size:24px; font-weight:bold; text-align:center; color:#fff;">
+      ..To improve its websight.<br>
+    </p>
+  </div>
+</div>
+
+<script>
+  // Load SVG 
+  fetch("assets/meter.svg")
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(svgData) {
+      document.getElementById("container").innerHTML = svgData;
+
+      var svg = document.querySelector("svg");
+      var needle = svg.getElementById("needle");
+
+      var pivotX = 187;
+      var pivotY = 207;
+      var tipX = 187;
+      var tipY = 5;
+
+      var minAngle = -90;
+      var maxAngle = 90;
+
+      svg.addEventListener("mousemove", function(e) {
+        var rect = svg.getBoundingClientRect();
+        var mouseX = (e.clientX - rect.left) * (381 / rect.width);
+        var mouseY = (e.clientY - rect.top) * (234 / rect.height);
+
+        var angleRad = Math.atan2(mouseY - pivotY, mouseX - pivotX) -
+                       Math.atan2(tipY - pivotY, tipX - pivotX);
+        var angle = angleRad * (180 / Math.PI);
+
+        if (angle < minAngle) angle = minAngle;
+        if (angle > maxAngle) angle = maxAngle;
+
+        needle.setAttribute("transform", "rotate(" + angle + " " + pivotX + " " + pivotY + ")");
+      });
+
+      svg.addEventListener("click", function() {
+        var transform = needle.getAttribute("transform");
+        var angle = parseFloat(transform.split("(")[1]);
+
+        var index = Math.floor((angle - minAngle) / 30);
+        if (index < 0) index = 0;
+        if (index > 5) index = 5;
+
+        var targetDiv = document.getElementById("joke" + (index + 1));
+        targetDiv.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    });
+
+  const clickSound = new Audio("assets/sound/crowdlaughing.mp3"); 
+  clickSound.preload = 'auto';
+
+  function playSound() {
+    const s = clickSound.cloneNode(true);
+    s.play().catch(err => {
+      console.warn('Audio play failed:', err);
+    });
+  }
+
+  // Button for Joke Reveal
+  function revealJoke(button) {
+    playSound();
+
+    const container = button.closest('.joke-content');
+    const punchline = container.querySelector('.punchline');
+    const isHidden = getComputedStyle(punchline).display === 'none';
+
+    if (isHidden) {
+      punchline.style.display = 'block';
+      punchline.classList.remove('aos-animate');
+      AOS.refreshHard();
+      requestAnimationFrame(() => punchline.classList.add('aos-animate'));
+    } else {
+      punchline.style.display = 'none';
+      punchline.classList.remove('aos-animate');
+    }
+  }
+
+  AOS.init();
+</script>
+
+
+</body>
+</html>
+
